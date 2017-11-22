@@ -1,0 +1,20 @@
+<div class="wikidoc">
+<p><strong>Windows Phone 7.1 AppData Helper Assembly</strong><br>
+<br>
+This WP7.1 AppDataHelper assembly is used to store global data within the Application's dictionary for NaviationService calls.<br>
+<br>
+This is my third WP7.1 assembly used to help ease development on Windows Phone. I will be adding additional WP7.1 assemblies in the near future.<br>
+<br>
+I use a default namespace string for all helper assemblies, making it easier to organize and locate assemblies within projects. Each helper assembly will be marked with the following default namespace: &quot;BenScharbach.WP7.Helpers&quot;, with the actual namespace's
+ specific name at the end of the default namespace; for example, 'AppDataHelper' for this assembly.<br>
+<br>
+This AppDataHelper assembly is useful to store data between page xaml calls when using the NaviationService. This helper uses the Application's dictionary-store, which is globally available throughout the application's life-cycle. Using this dictionary-store
+ eliminates the need to pass data via web string-queries or accessing the data using prior pages contain with the NavigationService's Stack.<br>
+<br>
+To use the AppDataHelper, add a reference to AppHelper singleton in the App.cs class within your Windows-Phone project. Call SetApplicationInstance() to set the WindowsPhone application instance, required for the singleton to access the dictionary-store. Use
+ SetDataNames() to set all constant key names required by your application; for example, to store a friend's name you might use the key-name of 'FirstNameKey'. Now in your application, use the Update() call with your key-name and key-value, which can be accessed
+ between page calls. To retrieve the key-value you stored, use the Get&lt;&gt;() call passing in your key-name.<br>
+<br>
+Thanks,<br>
+Ben Scharbach</p>
+</div><div class="ClearBoth"></div>
